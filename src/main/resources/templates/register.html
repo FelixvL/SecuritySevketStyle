@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script>
+        function addUser() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var role = document.getElementById("role").value;
+            if (username && password && role){
+                var data = '{"username":"'+username+'", "password":"'+password+'", "role":"'+role+'"}';
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        if(JSON.parse(this.responseText).body.username) {
+                            document.getElementById("result").innerText = JSON.parse(this.responseText).body.username + " added successfully"
+                        } else {
+                            document.getElementById("result").innerText = "User not added";
+                        }
+                    }
+                };
+                xhttp.open("POST", "http://localhost:8082/api/user/add");
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(data);
+            } else {
+                document.getElementById("header").innerText = "Please fill all the fields";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 id="header">Add User</h2>
+    <div id="result"></div>
+    User:     <input id="username" type='text' name='username'/><br/>
+    Password: <input id="password" type='password' name='password' /> <br/>
+    Role:     <input id="role" type='text' name='role' /> <br/>
+    <button name="addButton" onclick="addUser()">Add User</button>
+    <button name="mainPage" onclick="location.href='/'">Main Page</button>
+    <hr/>
+
+</body>
+</html>
