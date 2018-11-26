@@ -2,7 +2,7 @@
 
 Please first follow and complete the steps in [GSWPresentatie](https://github.com/FelixvL/GSWPresentatie). 
 
-In this presentation we assume that you have already a running spring project with at least one endpoint.
+In this presentation we assume that you have already followed and finished **GSWPresentatie** successfully.
 
 #### We will going to use :
 - Spring Basic Security
