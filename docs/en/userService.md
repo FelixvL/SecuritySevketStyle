@@ -42,7 +42,7 @@ to created private final objects.
     ```
   
 1. Create public **getUserByUsername** method with User return type and String username parameter.
-    **P.S.:**_Use the User class created by [Create User Entity Class](readme/en/userEntity.md) _steps for return type 
+    **P.S.:**_Use the User class created by [Create User Entity Class](/docs/en/userEntity.md) _steps for return type 
     and for the next step that already created by._ 
     ```
         public User getUserByUsername(String username) { }
@@ -55,7 +55,7 @@ to created private final objects.
     1. Create an if else statement for result object is not null.
         1. Return result if result object is not null.
         1. Throw new UserNotFoundException with a message parameter.
-        **P.S.:**_Use the custom UserNotFound exception created by [Create User Not Found Custom Exception Class](/readme/en/userNotFoundException.md) 
+        **P.S.:**_Use the custom UserNotFound exception created by [Create User Not Found Custom Exception Class](/docs/en/userNotFoundException.md) 
         _steps_.
         ```
         if (result != null) {

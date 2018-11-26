@@ -7,7 +7,7 @@ Update spring boot application class by following steps:
 **@Bean** annotation.
 
 1. Return a lambda for `(args)` to call initUsers of userService object that created in 
-[Create User Service Class](/readme/en/userService.md) steps.
+[Create User Service Class](/docs/en/userService.md) steps.
 
 ```
 @Bean
